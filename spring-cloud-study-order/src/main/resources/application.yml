@@ -1,0 +1,18 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: cloud-order-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server2:9000/eureka/,http://eureka-server1:8000/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+#openFeign默认超时时间为1秒，如果接口调用时间超过1秒会报错，所以需要以下两行配置，避免报错
+ribbon:
+  ReadTimeOut: 5000
+  ConnectTimeOut: 5000

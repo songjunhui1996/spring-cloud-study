@@ -1,0 +1,12 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: cloud-pay-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server2:9000/eureka/,http://eureka-server1:8000/eureka/
+    register-with-eureka: true
+    fetch-registry: true

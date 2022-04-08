@@ -1,0 +1,10 @@
+server:
+  port: 8000
+eureka:
+  instance:
+    hostname: eureka-server1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka-server2:9000/eureka/
